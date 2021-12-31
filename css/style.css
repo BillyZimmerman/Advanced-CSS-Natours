@@ -63,6 +63,7 @@ body {
   left: 50%;
   /* USING TRANSFORM TO CENTER THE H1 TEXT */
   transform: translate(-50%, -50%);
+  text-align: center;
   /* background-color: orange; */
 }
 
@@ -71,6 +72,7 @@ body {
   text-transform: uppercase;
   /* USING BACKFACE REMOVES THE WEIRD SHAKING OF THE H1 TEXT ANIMATION */
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -126,4 +128,76 @@ body {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+@keyframes moveInButton {
+  /* START AT 0% w/ 0 opacity */
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* USING THE link SUDO CLASS TO STYLE AN ELEMENT WITH A SPECIAL CONDITION */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  /* USING inline TO ADD PADDING OR HEIGHT OR WIDTH TO AN ELEMENT */
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  /* Creating a shadow that only goes down (y axis), 20px creates a blur effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-white {
+  background-color: white;
+  color: #777;
+  padding: 15px 40px;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* THE Z INDEX DEFINES THE POSITION OF THE ELEMENTS IF THEY ARE ONE ON TOP OF THE OTHER  */
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  /* SCALE INCREASES THE ELEMENT */
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInButton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
