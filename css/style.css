@@ -53,18 +53,24 @@ body {
   height: 35px;
 }
 
+/* .logo:hover {
+  animation: moveInRight 1s ease-out;
+} */
+
 .text-box {
   position: absolute;
   top: 40%;
   left: 50%;
   /* USING TRANSFORM TO CENTER THE H1 TEXT */
   transform: translate(-50%, -50%);
-  background-color: orange;
+  /* background-color: orange; */
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  /* USING BACKFACE REMOVES THE WEIRD SHAKING OF THE H1 TEXT ANIMATION */
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -72,11 +78,52 @@ body {
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  /* animation-delay: 3s; */
 }
 
 .heading-primary-sub {
   display: block;
   font-weight: 700;
   font-size: 20px;
-  letter-spacing: 17.54px;
+  letter-spacing: 17.4px;
+  /* USING THE SHORTHAND VERSION FOR THE ANIMATIONS */
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  /* START AT 0% w/ 0 opacity */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+  /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  /* START AT 0% w/ 0 opacity */
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+  /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
