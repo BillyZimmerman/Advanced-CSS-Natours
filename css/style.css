@@ -14,14 +14,19 @@ Dark green: #28b485
   box-sizing: border-box;
 }
 
+html {
+  /* SETTING THE ROOT FONT SIZE TO 10 SO THAT REMS WILL = 10px EACH FOR EASY MATH */
+  font-size: 10px;
+}
+
 /* ALWAYS SPECIFY FONT FAMILY IN THE BODY NOT UNIVERSAL (*)   */
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 
 .header {
@@ -44,13 +49,13 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 /* SETTING THE HEIGHT ALSO CONTROLS THE WIDTH AND VICE VERSA */
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 /* .logo:hover {
@@ -72,14 +77,14 @@ body {
   text-transform: uppercase;
   /* USING BACKFACE REMOVES THE WEIRD SHAKING OF THE H1 TEXT ANIMATION */
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -89,9 +94,9 @@ body {
 
 .heading-primary-sub {
   display: block;
+  font-size: 2rem;
   font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
   /* USING THE SHORTHAND VERSION FOR THE ANIMATIONS */
   animation: moveInRight 1s ease-out;
 }
@@ -100,11 +105,11 @@ body {
   /* START AT 0% w/ 0 opacity */
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
   100% {
@@ -117,11 +122,11 @@ body {
   /* START AT 0% w/ 0 opacity */
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
   100% {
@@ -134,7 +139,7 @@ body {
   /* START AT 0% w/ 0 opacity */
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
 
   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
@@ -149,9 +154,10 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
+  padding: 1.5rem 4rem;
   /* USING inline TO ADD PADDING OR HEIGHT OR WIDTH TO AN ELEMENT */
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
 }
@@ -159,18 +165,17 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   /* Creating a shadow that only goes down (y axis), 20px creates a blur effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .btn-white {
   background-color: white;
   color: #777;
-  padding: 15px 40px;
 }
 
 .btn::after {
@@ -178,7 +183,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
