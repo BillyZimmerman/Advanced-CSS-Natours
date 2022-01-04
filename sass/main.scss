@@ -1,11 +1,9 @@
-/*
-COLORS:
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
+$color-grey-dark: #777;
+$color-white: #fff;
 
 /* using the universal selector to remove all margin and padding  */
 /* including the sudo elements after and before to avoid any strange behaviors from happening  */
@@ -30,7 +28,7 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 3rem;
   box-sizing: border-box;
 }
@@ -40,8 +38,8 @@ body {
   /* using LINEAR-GRADIENT "to right" to make the gradient go from left to right */
   background-image: linear-gradient(
       to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 131, 0.8)
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
     ),
     url(../img/hero.jpg);
   background-size: cover;
@@ -79,7 +77,7 @@ body {
 }
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   /* USING BACKFACE REMOVES THE WEIRD SHAKING OF THE H1 TEXT ANIMATION */
   backface-visibility: hidden;
@@ -182,7 +180,7 @@ body {
 
 .btn--white {
   background-color: white;
-  color: #777;
+  color: $color-grey-dark;
 }
 
 .btn::after {
@@ -200,7 +198,7 @@ body {
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 
 .btn:hover::after {

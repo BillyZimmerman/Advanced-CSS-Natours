@@ -1,12 +1,3 @@
-/* 
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 /* using the universal selector to remove all margin and padding  */
 /* including the sudo elements after and before to avoid any strange behaviors from happening  */
 *,
@@ -15,14 +6,12 @@ Dark green: #28b485
   margin: 0;
   padding: 0;
   /* USING INHERITED PROPERTY TO FORCE INHERITANCE TO BORDER-BOX*/
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   /* SETTING THE ROOT FONT SIZE TO 10px SO THAT REMS WILL = 10px EACH FOR EASY MATH */
   /* in order to not override the default font size we had to do math 16px is the standard font size on a browser so instead of using px we had to figure 10(px) / 16px(standard font size) = 62.5% ALLOWING THE USER TO CHANGE THE FONT SIZE*/
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
 
 /* ALWAYS SPECIFY FONT FAMILY IN THE BODY NOT UNIVERSAL (*)   */
 body {
@@ -32,42 +21,32 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .header {
   height: 95vh;
   /* using LINEAR-GRADIENT "to right" to make the gradient go from left to right */
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(126, 213, 111, 0.8),
-      rgba(40, 180, 131, 0.8)
-    ),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   /* USING CLIP-PATH - POLYGON TO CROP THE IMAGE IN A UNIQUE WAY */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* EXAMPLE OF A TRIANGLE 
   clip-path: polygon(50% 0, 100% 100%, 0 100%); */
-  position: relative;
-}
+  position: relative; }
 
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem;
-}
+  left: 4rem; }
 
 /* SETTING THE HEIGHT ALSO CONTROLS THE WIDTH AND VICE VERSA */
 .header__logo {
-  height: 3.5rem;
-}
+  height: 3.5rem; }
 
 /* .logo:hover {
   animation: moveInRight 1s ease-out;
 } */
-
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -75,28 +54,24 @@ body {
   /* USING TRANSFORM TO CENTER THE H1 TEXT */
   transform: translate(-50%, -50%);
   text-align: center;
-  /* background-color: orange; */
-}
+  /* background-color: orange; */ }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   /* USING BACKFACE REMOVES THE WEIRD SHAKING OF THE H1 TEXT ANIMATION */
   backface-visibility: hidden;
-  margin-bottom: 6rem;
-}
+  margin-bottom: 6rem; }
 
 .heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
-
   animation-name: moveInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;
-  /* animation-delay: 3s; */
-}
+  /* animation-delay: 3s; */ }
 
 .heading-primary--sub {
   display: block;
@@ -104,56 +79,41 @@ body {
   font-weight: 700;
   letter-spacing: 1.75rem;
   /* USING THE SHORTHAND VERSION FOR THE ANIMATIONS */
-  animation: moveInRight 1s ease-out;
-}
+  animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   /* START AT 0% w/ 0 opacity */
   0% {
     opacity: 0;
-    transform: translateX(-10rem);
-  }
-
+    transform: translateX(-10rem); }
   80% {
-    transform: translateX(1rem);
-  }
+    transform: translateX(1rem); }
   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes moveInRight {
   /* START AT 0% w/ 0 opacity */
   0% {
     opacity: 0;
-    transform: translateX(10rem);
-  }
-
+    transform: translateX(10rem); }
   80% {
-    transform: translateX(-1rem);
-  }
+    transform: translateX(-1rem); }
   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes moveInButton {
   /* START AT 0% w/ 0 opacity */
   0% {
     opacity: 0;
-    transform: translateY(3rem);
-  }
-
+    transform: translateY(3rem); }
   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 /* USING THE link SUDO CLASS TO STYLE AN ELEMENT WITH A SPECIAL CONDITION */
 .btn:link,
@@ -166,24 +126,20 @@ body {
   border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
-  font-size: 1.6rem;
-}
+  font-size: 1.6rem; }
 
 .btn:hover {
   transform: translateY(-3px);
   /* Creating a shadow that only goes down (y axis), 20px creates a blur effect */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-}
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
 
 .btn--white {
   background-color: white;
-  color: #777;
-}
+  color: #777; }
 
 .btn::after {
   content: "";
@@ -196,20 +152,16 @@ body {
   left: 0;
   /* THE Z INDEX DEFINES THE POSITION OF THE ELEMENTS IF THEY ARE ONE ON TOP OF THE OTHER  */
   z-index: -1;
-  transition: all 0.4s;
-}
+  transition: all 0.4s; }
 
 .btn--white::after {
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .btn:hover::after {
   /* SCALE INCREASES THE ELEMENT */
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  opacity: 0; }
 
 .btn--animated {
   animation: moveInButton 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
