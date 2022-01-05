@@ -1,0 +1,42 @@
+.header {
+  height: 95vh;
+  /* using LINEAR-GRADIENT "to right" to make the gradient go from left to right */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* USING CLIP-PATH - POLYGON TO CROP THE IMAGE IN A UNIQUE WAY */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* EXAMPLE OF A TRIANGLE 
+  clip-path: polygon(50% 0, 100% 100%, 0 100%); */
+  position: relative;
+  // NESTING THE logo-box INSIDE THE .HEADER Using the "&__" to connect to its parents
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  /* SETTING THE HEIGHT ALSO CONTROLS THE WIDTH AND VICE VERSA */
+  &__logo {
+    height: 3.5rem;
+  }
+
+  /* .logo:hover {
+  animation: moveInRight 1s ease-out;
+} */
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* USING TRANSFORM TO CENTER THE H1 TEXT */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* background-color: orange; */
+  }
+}

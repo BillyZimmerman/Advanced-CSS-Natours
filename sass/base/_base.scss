@@ -1,0 +1,20 @@
+/* using the universal selector to remove all margin and padding  */
+/* including the sudo elements after and before to avoid any strange behaviors from happening  */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* USING INHERITED PROPERTY TO FORCE INHERITANCE TO BORDER-BOX*/
+  box-sizing: inherit;
+}
+
+html {
+  /* SETTING THE ROOT FONT SIZE TO 10px SO THAT REMS WILL = 10px EACH FOR EASY MATH */
+  /* in order to not override the default font size we had to do math 16px is the standard font size on a browser so instead of using px we had to figure 10(px) / 16px(standard font size) = 62.5% ALLOWING THE USER TO CHANGE THE FONT SIZE*/
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}

@@ -1,0 +1,60 @@
+.btn {
+  /* USING THE link SUDO CLASS TO STYLE AN ELEMENT WITH A SPECIAL CONDITION */
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    /* USING inline TO ADD PADDING OR HEIGHT OR WIDTH TO AN ELEMENT */
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    /* Creating a shadow that only goes down (y axis), 20px creates a blur effect */
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      /* SCALE INCREASES THE ELEMENT */
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.3);
+  }
+  // THIS READS AS btn--white
+  &--white {
+    background-color: white;
+    color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* THE Z INDEX DEFINES THE POSITION OF THE ELEMENTS IF THEY ARE ONE ON TOP OF THE OTHER  */
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--animated {
+    animation: moveInButton 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
