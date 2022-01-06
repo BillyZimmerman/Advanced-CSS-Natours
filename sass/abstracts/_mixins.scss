@@ -1,0 +1,8 @@
+@mixin clearfix {
+  &::after {
+    // setting the content to "" to make it blank
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
