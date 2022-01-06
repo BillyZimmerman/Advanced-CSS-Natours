@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: rgb(238, 238, 238);
   // good practice to center block elements inside another block element in this example auto will set left and right spacing to be the same
   margin: 0 auto;
   margin-bottom: $gutter-vertical;
@@ -13,7 +12,6 @@
 
   // USING THE ATTRIBUTE SELECTOR - selecting all the class attributes with col-
   [class^="col-"] {
-    background-color: orangered;
     float: left;
     // To still have a visible gutter you need the right margins on all but the far right col
     &:not(:last-child) {
