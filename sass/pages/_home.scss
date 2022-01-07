@@ -4,3 +4,24 @@
   // using margin-top -20vh to cover the area below the green header to remove the white space between the section and header for a nice clean look
   margin-top: -20vh;
 }
+
+.section-features {
+  padding: 20rem 0; 
+   /* using LINEAR-GRADIENT "to right" to make the gradient go from left to right */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, .8),
+      rgba($color-primary-dark, .8)
+    ),
+    url(../img/nat-4.jpg);
+    background-size: cover;
+// MOVING MARGIN-TOP UP TO REMOVE THE WHITE SPACE BETWEEN LEARN MORE AND FEATURES SECTION
+    margin-top: -9.5rem;
+  // Creating the skewed backdrop for a modern look
+  transform: skewY(-7deg);
+  // USING THE DIRECT CHILD SELECTOR - selecting all (*) the children of the parent
+  // TRANSFORMING 7deg TO RETURN EACH FEATURE BOX BACK TO BEING STRAIGHT
+  & > * {
+    transform: skewY(7deg);
+  }
+}

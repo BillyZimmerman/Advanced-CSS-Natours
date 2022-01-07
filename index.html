@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- LINK TO GOOGLES LATO FONT STYLE -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
+<!-- LINK TO GOOGLES LATO FONT STYLE -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"/>
+<!-- IMPORTING THE ICONS ADDED IN THE CSS FOLDER -->
+    <link rel="stylesheet" href="css/icon-font.css">
 
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -17,14 +16,14 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <!-- WHEN USING THE BEM (BLOCK/ELEMENT/MODIFIER) SYSTEM IF ITS AN ELEMENT ITS "__" -->
+<!-- WHEN USING THE BEM (BLOCK/ELEMENT/MODIFIER) SYSTEM IF ITS AN ELEMENT ITS "__" -->
     <header class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header__logo" />
       </div>
 
       <div class="header__text-box">
-        <!-- USING A SPAN TO INCLUDE MORE TEXT FOR GOOGLE TO READ AND RECOGNIZE, FORMATTING IN CSS-->
+<!-- USING A SPAN TO INCLUDE MORE TEXT FOR GOOGLE TO READ AND RECOGNIZE, FORMATTING IN CSS-->
         <h1 class="heading-primary">
           <!-- WHEN USING THE BEM (BLOCK/ELEMENT/MODIFIER) SYSTEM IF ITS A MODIFIER ITS "--" -->
 
@@ -35,14 +34,14 @@
         <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
       </div>
     </header>
-    <!-- USING main for screen readers and search engines this is the main part of the site  -->
+<!-- USING main for screen readers and search engines this is the main part of the site  -->
     <main>
-      <!-- FOR MUCH FASTER CODING USE .+name of class you want to make, example .test -->
-      <!-- <div class="test"></div> -->
-      <!-- ================================================================================================ -->
-      <!-- TO QUICKLY CREATE A SECTION ENTER section."name of class you want to make" example section.section-about-->
+<!-- FOR MUCH FASTER CODING USE .+name of class you want to make, example .test -->
+<!-- <div class="test"></div> -->
+<!-- ================================================================================================ -->
+<!-- TO QUICKLY CREATE A SECTION ENTER section."name of class you want to make" example section.section-about-->
       <section class="section-about">
-        <!-- CREATING A UTILITY CLASS SPECIFICALLY TO CENTER TEXT -->
+<!-- CREATING A UTILITY CLASS SPECIFICALLY TO CENTER TEXT -->
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -67,7 +66,7 @@
             <a href="#" class="btn-text">Learn more &rarr;</a>
         </div>
               <div class="col-1-of-2">
-                <!-- EXAMPLE OF BLOCK ELEMENT MODIFIER  -->
+  <!-- EXAMPLE OF BLOCK ELEMENT MODIFIER  -->
   <!-- EXACT CODE PROVIDES 3 PHOTO SLOTS - .composition>(img.composition__photo.composition__photo--p1)*3 (then tab)-->
                   <div class="composition">
                     <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
@@ -76,6 +75,56 @@
                   </div>
               </div>
             </div>
+      </section>
+
+      <section class="section-features">
+            <div class="row">
+<!-- USING ICONS FROM AN IMPORTED FILE, STEP ONE - PULL THE STYLES.CSS FILE AND FONTS FOLDER INTO YOUR PROJECTS CSS FOLDER, RENAME STYLES TO ICON-FONTS, REFERENCE THE ICONS HTML FILE TO FIND THE CORRECT NAME FOR THE ICON YOU WANT TO USE -->
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-world"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
+                            <p class="feature-box__text">
+                                    placeat nesciunt in iusto neque. Numquam totam, quae nam
+                                    et laboriosam maxime aliquam atque unde ducimus dolorum quasi minus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-compass"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Meet Nature</h3>
+                            <p class="feature-box__text">
+                                    placeat nesciunt in iusto neque. Numquam totam, quae nam
+                                    et laboriosam maxime aliquam atque unde ducimus dolorum quasi minus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-map"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Take over the world</h3>
+                            <p class="feature-box__text">
+                                    placeat nesciunt in iusto neque. Numquam totam, quae nam
+                                    et laboriosam maxime aliquam atque unde ducimus dolorum quasi minus.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-heart"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
+                            <p class="feature-box__text">
+                                    placeat nesciunt in iusto neque. Numquam totam, quae nam
+                                    et laboriosam maxime aliquam atque unde ducimus dolorum quasi minus.
+                            </p>
+                        </div>
+                    </div>
+          </div>  
+
       </section>
     </main>
     <!-- <section class="grid-test">
