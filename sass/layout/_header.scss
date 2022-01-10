@@ -14,6 +14,8 @@
   /* EXAMPLE OF A TRIANGLE 
   clip-path: polygon(50% 0, 100% 100%, 0 100%); */
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   // NESTING THE logo-box INSIDE THE .HEADER Using the "&__" to connect to its parents
   &__logo-box {
     position: absolute;
