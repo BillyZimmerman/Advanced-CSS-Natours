@@ -48,6 +48,7 @@
     &__img {
 // MAKING THE IMAGE HEIGHT 100% SO THAT IT FILLS THE ENTIRE CIRCLE SHAPE
         height: 100%;
+// TO CENTER THE IMG IN THE CIRCLE AND SCALING IT LARGER SO WHEN HOVERED A NICE EFFECT IS CREATED
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
         transition: all .5s;
@@ -71,18 +72,24 @@
         text-transform: uppercase;
         font-size: 1.7rem;
         text-align: center;
+// SETTING UP THE INITIAL STATE OF THE IMAGE BEFORE HOVER SO ITS CLEAN BEFORE AND WHEN HOVERED IT WILL FADE AND ADD TEXT
         opacity: 0;
+// CREATING THE TRANSITION ANIMATION
         transition: all .5s;
+// REMOVING THE SMALL GLITCH WITH THE TEXT
         backface-visibility: hidden;
     }
 
     &:hover &__caption {
+// WHEN HOVERED OVER THE IMAGE WILL TURN WITH MORE OPACITY
         opacity: 1;
         transform: translate(-50%, -50%);
     }
 
     &:hover &__img {
+// WHEN HOVERED THE SCALE OF THE IMG IS RETURNED TO 1 FOR A NICE ANIMATION SEE LINE 52
         transform: translateX(-4rem) scale(1);
+// BRIGHTNESS VALUE BELOW 100% IS DARKER 
         filter: blur(3px) brightness(80%);
     }
 }
