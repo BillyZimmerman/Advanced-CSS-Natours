@@ -1,0 +1,18 @@
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+// USING THIS PROPERTY TO HIDE THE OVERFLOW
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+// SETTING THE OBJECT FIT TO COVER TO STAY WITHIN THE CONTAINER, USING COVER NOT FILL TO MAINTAIN THE ASPECT RATION FOR DIFFERENT SCREEN SIZES
+        object-fit: cover;
+    }
+}

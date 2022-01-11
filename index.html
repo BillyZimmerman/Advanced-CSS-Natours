@@ -35,7 +35,7 @@
       </div>
     </header>
 <!-- USING main for screen readers and search engines this is the main part of the site  -->
-    <main>
+<main>
 <!-- FOR MUCH FASTER CODING USE .+name of class you want to make, example .test -->
 <!-- <div class="test"></div> -->
 <!-- ================================================================================================ -->
@@ -239,9 +239,11 @@
 <!-- =============================================================================== -->
        <section class="section-stories">
                 <div class="bg-video">
+<!-- USING THE VIDEO ELEMENT, NOTICE SPECIFIC DIFFERENCES  -->
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
                         <source src="img/video.webm" type="video/webm">
+<!-- DEFAULT TEXT IF THE BROWSER DOES NOT SUPPORT THE VIDEO -->
                         Your browser is not supported!
                     </video>
                 </div>
@@ -293,10 +295,34 @@
                  <div class="u-center-text u-margin-top-huge">
                     <a href="#" class="btn btn-text">Read All Stories &rarr;</a>
                 </div> 
+      </section>  
+<!-- ========================================================================== -->
+    <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <form action="#" class="form">
+                          <div class="u-margin-bottom-medium">
+                    <h2 class="heading-secondary">
+                        Start Booking Now
+                    </h2>
+                        </div>
+                            <div class="form__group">
+<!-- using the required attribute to require the user to enter in that field -->
+                                <input type="text" class="form__input" placeholder="Full Name" id="name" required>
+                                <label for="name" class="form__label">Full Name</label>
+                            </div>
 
-
-      </section>   
-    </main>
+                             <div class="form__group">
+                                <input type="email" class="form__input" placeholder="Email" id="email" required>
+                                <label for="email" class="form__label">Email</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>
     <!-- <section class="grid-test">
       <div class="row">
         <div class="col-1-of-2">col 1 of 2</div>

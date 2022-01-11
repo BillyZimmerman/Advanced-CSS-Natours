@@ -2,7 +2,7 @@
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
-    background-color: rgba($color-white, .6);
+    background-color: rgba($color-white, .2);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
@@ -20,16 +20,18 @@
         transform: skewX(0);
     }
 
-    &__shape {
+
+  &__shape {
         width: 15rem;
         height: 15rem;
-        background-color: rgb(9, 255, 0);
         float: left;
-// INCLUDING THE skewX 12deg to return the shape back to normal since the transform of the box skewed the shape and text as well and that was not desired
+  // INCLUDING THE skewX 12deg to return the shape back to normal since the transform of the box skewed the shape and text as well and that was not desired
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
         overflow: hidden;
         border-radius: 50%;
+
+
 // USING WEBKIT PROPERTY SO THAT IT WORKS ON OTHER BROWSERS 
         @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
             -webkit-clip-path: circle(50% at 50% 50%);
