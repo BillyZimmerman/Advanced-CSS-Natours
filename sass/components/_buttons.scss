@@ -1,17 +1,23 @@
-.btn {
-  /* USING THE link SUDO CLASS TO STYLE AN ELEMENT WITH A SPECIAL CONDITION */
-  &:link,
-  &:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
+  .btn {
+    &,
+    /* USING THE link and visited SUDO CLASS TO STYLE AN ELEMENT WITH A SPECIAL CONDITION */
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
     /* USING inline TO ADD PADDING OR HEIGHT OR WIDTH TO AN ELEMENT */
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: $default-font-size;
-  }
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
 
   &:hover {
     transform: translateY(-3px);
@@ -25,9 +31,11 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
-    box-shadow: 0 .5rem 1rem rgba($color-black, .3);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
   }
   // THIS READS AS btn--white
   &--white {
