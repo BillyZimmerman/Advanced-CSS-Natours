@@ -1,0 +1,64 @@
+.form {
+
+  &__group:not(:last-child) {
+      margin-bottom: 2rem;
+    
+  }
+  &__input {
+      font-size: 1.5rem; 
+  // SETTING THE FONT FAMILY AND COLOR TO INHERIT ITS PARENTS TRAIT BECAUSE INPUT ELEMENTS DO NOT AUTOMATICALLY
+      font-family: inherit;
+      color: inherit;
+      padding: 1.5rem 2rem;
+      border-radius: 2px; 
+      background-color: rgba($color-white, .5);
+      border: none;
+      // setting the border bottom to transparent so when its focused there will be no weird movements 
+      border-bottom: 3px solid transparent;
+      width: 90%;
+      display: block;
+
+      // REMOVING THE OUTLINE OF THE FIELD WHEN ITS FOCUSED
+  &:focus {
+    // REMOVING THE OUTLINE OF THE FIELD WHEN ITS FOCUSED
+    outline: none;
+// FOR BEST PRACTICE ITS IMPORTANT TO ADD AN INPUT FOCUS FOR ANYONE THAT ONLY USES A KEYBOARD FOR EXAMPLE
+    box-shadow: 0 1rem 2rem rgba($color-black, .1);
+    border-bottom: 3px solid $color-primary;
+        }
+
+        // SETTING UP INVALID STYLING FOR THE FORM, WHEN NOT COMPLETED IT WILL BE RED
+        &:focus:invalid{
+            border-bottom: 3px solid red;
+        }
+
+          // SETTING UP INVALID STYLING FOR THE FORM, WHEN COMPLETED correctly IT WILL BE green
+        &:focus:valid{
+            border-bottom: 3px solid $color-primary;
+        }
+
+
+       &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+  }
+
+  &__label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-left: 2rem;
+      margin-top: .7rem;
+      display: block;
+      transition: all .3s;
+  }
+// styling the input and label with the adjacent siblings selector, in this example there are only two siblings so this is easier, see html to reference which is 1st child
+  &__input:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden;
+      // creating the animation for the placeholder text to animate down once a form has input
+      transform: translateY(-4rem);
+
+  }
+
+
+}
