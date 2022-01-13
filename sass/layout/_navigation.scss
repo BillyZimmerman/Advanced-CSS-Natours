@@ -1,0 +1,90 @@
+.navigation {
+
+  &__checkbox {
+    // HIDING THE CHECKBOX SINCE WE ARE USING A BUTTON INSTEAD
+    display: none;
+
+  }
+
+  &__button {
+      background-color: $color-white;
+      // MAKING THE BUTTON 1rem BIGGER THAN CHECKBOX TO COVER IT
+      height: 7rem;
+      width: 7rem;
+      position: fixed;
+      top: 6rem;
+      right: 6rem;
+      border-radius: 50%;
+      z-index: 2000;
+  }
+
+  &__background {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      position: fixed ;
+      top: 6.5rem;
+      right: 6.5rem;
+      background-image: radial-gradient($color-primary-light,$color-primary-dark);
+      // POPPING THE NAV CIRCLE IN FRONT OF ALL OTHER ELEMENTS, YOU CAN DO THIS AS LONG AS YOU DEFINE THE POSITION, IN THIS CASE FIXED
+      z-index: 1000;
+
+      transform: scale(80);
+  }
+
+  &__nav {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      // SETTING THE NAV TO BE ON TOP OF THE BACKGROUND AND BEHIND THE BUTTON
+      z-index: 1500;
+  }
+
+  &__list {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      list-style: none;
+      text-align: center;
+
+
+  }
+
+  &__item {
+      margin: 1rem;
+  }
+
+  &__link {
+      &:link,
+      &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      // GOOD IDEA WHEN CREATING A GRADIENT IS TO USE COLORS THAT SHARPLY CONTRAST TO MORE EASILY CREATE YOUR DESIGN THEN CHANGE THE COLORS TO WHAT YOU WANT
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      // SETTING THE BACKGROUND TO 220% SO THAT THE STATE OF THE BUTTON WILL BE ALL SOLID BEFORE THE HOVER ANIMATION
+      background-size: 220%;
+      transition: all .4s;
+
+      span {
+          margin-right: 1.5rem;
+          display: inline-block;
+      }
+  }
+
+    &:hover,
+    &:active {
+        background-position: 100%;
+        color: $color-primary;
+        transform: translateX(1rem);
+        border-radius: 1rem;
+      }
+  }
+}
