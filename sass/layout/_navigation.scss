@@ -106,13 +106,13 @@
         }
     }
 
-        //USING THE SIBLING ~ SELECTOR THEN SPECIFYING WHICH SIBLING WE WANT TO EDIT "BACKGROUND"
+  //USING THE SIBLING ~ SELECTOR THEN SPECIFYING WHICH SIBLING WE WANT TO EDIT "BACKGROUND"
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
 
     &__checkbox:checked ~ &__nav {
-      // RETURNING THE HIDDEN ELEMENTS FOR BEFORE THE BUTTON IS CLICKED BACK TO ITS ORIGINAL STATE OF VISIBILITY AFTER THE CHECKBOX/BUTTON IS CLICKED
+  // RETURNING THE HIDDEN ELEMENTS FOR BEFORE THE BUTTON IS CLICKED BACK TO ITS ORIGINAL STATE OF VISIBILITY AFTER THE CHECKBOX/BUTTON IS CLICKED
         opacity: 1;
         width: 100%;
     }
@@ -121,6 +121,7 @@
     //ICON
     &__icon {
         position: relative;
+        // MOVING DOWN THE BURGER LINES TO BE CENTERED TO THE WHITE BUTTON/CHECKBOX
         margin-top: 3.5rem;
 
         &,
@@ -140,10 +141,11 @@
             transition: all .2s;
         }
 
+    // CREATING A TIGHTER LOOK FOR THE CHECKBOX/BUTTON BURGER LINES THAT WERE MADE AS A SPAN
         &::before { top: -.8rem; }
         &::after { top: .8rem; }
     }
-
+    // ADDS SMALL MOVEMENT TO BUTTON WHEN HOVERED THE BURGER LINES WILL MOVE
     &__button:hover &__icon::before {
         top: -1rem;
     }
@@ -152,15 +154,18 @@
         top: 1rem;
     }
 
+    // MAKING THE CHECKBOX DISAPPEAR WHEN ITS CHECKED, USING THE ADJACENT SIBLING SELECTOR +
+  
     &__checkbox:checked + &__button &__icon {
         background-color: transparent;
     }
 
+    // CREATING THE NICE X ANIMATION ON THE BURGER LINES WHEN CLICKED PT1
     &__checkbox:checked + &__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
-
+    // CREATING THE NICE X ANIMATION ON THE BURGER LINES WHEN CLICKED PT2
     &__checkbox:checked + &__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
