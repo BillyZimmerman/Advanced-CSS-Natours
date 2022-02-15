@@ -3,7 +3,6 @@
   &__checkbox {
     // HIDING THE CHECKBOX SINCE WE ARE USING A BUTTON INSTEAD
     display: none;
-
   }
 
       &__button {
@@ -60,7 +59,6 @@
       width: 0;
       transition: all .8s;
   }
-
 
     &__list {
         position: absolute;

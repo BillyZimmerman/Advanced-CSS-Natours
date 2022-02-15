@@ -1,5 +1,4 @@
 .card {
-
     // FUNCTIONALITY
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -39,7 +38,6 @@
             }
         }
     }
-  
 
     &:hover &__side--front {
         transform: rotateY(-180deg);
@@ -48,7 +46,6 @@
     &:hover &__side--back {
         transform: rotateY(0);
     }
-
 
     // FRONT SIDE STYLING
     &__picture {
@@ -59,7 +56,6 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-        
         
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
@@ -160,10 +156,6 @@
         font-weight: 100;
     }
 
-
-
-
-
     //@include respond(tab-port) {
     @media only screen and (max-width: 56.25em),
             only screen and (hover: none) {
@@ -188,7 +180,6 @@
             transform: rotateY(0);
         }
 
-    
         &__details {
             padding: 1rem 3rem;
         }
@@ -211,5 +202,4 @@
             font-size: 4rem;
         }
     }
-
 }

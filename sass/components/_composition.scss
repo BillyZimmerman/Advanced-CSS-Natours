@@ -33,12 +33,10 @@ position: relative;
       box-shadow: 0 2.5rem 4 rem rgba($color-black, .5);
       // TO MAKE THE IMAGE THAT IS HOVERED POP TO THE TOP, NOTE LINE 9 THE Z INDEX IS ORIGINALLY SET @ 10
       z-index: 20;
-      
-        }
+      }
     }
 // SETTING IT UP SO THAT THE IMG NOT HOVERED WILL SCALE DOWN IN SIZE
     &:hover &__photo:not(:hover){
       transform: scale(.95);
-
     }
 }

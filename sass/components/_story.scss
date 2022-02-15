@@ -20,7 +20,6 @@
         transform: skewX(0);
     }
 
-
   &__shape {
         width: 15rem;
         height: 15rem;
@@ -30,7 +29,6 @@
         position: relative;
         overflow: hidden;
         border-radius: 50%;
-
 
 // USING WEBKIT PROPERTY SO THAT IT WORKS ON OTHER BROWSERS 
         @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
