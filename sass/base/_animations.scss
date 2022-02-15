@@ -1,47 +1,91 @@
+// @keyframes moveInLeft {
+//   /* START AT 0% w/ 0 opacity */
+//   0% {
+//     opacity: 0;
+//     transform: translateX(-10rem);
+//   }
+
+//   80% {
+//     transform: translateX(1rem);
+//   }
+//   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+//   100% {
+//     opacity: 1;
+//     transform: translate(0);
+//   }
+// }
+
+// @keyframes moveInRight {
+//   /* START AT 0% w/ 0 opacity */
+//   0% {
+//     opacity: 0;
+//     transform: translateX(10rem);
+//   }
+
+//   80% {
+//     transform: translateX(-1rem);
+//   }
+//   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+//   100% {
+//     opacity: 1;
+//     transform: translate(0);
+//   }
+// }
+
+// @keyframes moveInButton {
+//   /* START AT 0% w/ 0 opacity */
+//   0% {
+//     opacity: 0;
+//     transform: translateY(3rem);
+//   }
+
+//   /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+//   100% {
+//     opacity: 1;
+//     transform: translate(0);
+//   }
+// }
+
 @keyframes moveInLeft {
-  /* START AT 0% w/ 0 opacity */
   0% {
-    opacity: 0;
-    transform: translateX(-10rem);
+      opacity: 0;
+      transform: translateX(-10rem);
   }
 
   80% {
-    transform: translateX(1rem);
+      transform: translateX(1rem);
   }
-  /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+
   100% {
-    opacity: 1;
-    transform: translate(0);
+      opacity: 1;
+      transform: translate(0);
   }
 }
 
 @keyframes moveInRight {
-  /* START AT 0% w/ 0 opacity */
   0% {
-    opacity: 0;
-    transform: translateX(10rem);
+      opacity: 0;
+      transform: translateX(10rem);
   }
 
   80% {
-    transform: translateX(-1rem);
+      transform: translateX(-1rem);
   }
-  /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
+
   100% {
-    opacity: 1;
-    transform: translate(0);
+      opacity: 1;
+      transform: translate(0);
   }
 }
 
-@keyframes moveInButton {
-  /* START AT 0% w/ 0 opacity */
+@keyframes moveInBottom {
   0% {
-    opacity: 0;
-    transform: translateY(3rem);
+      opacity: 0;
+      transform: translateY(3rem);
   }
 
-  /* FINISH AT 100% OPACITY @ 1 FOR FULL AND TRANSLATE 0 TO BE WHAT THE IMAGE IS NORMALLY */
   100% {
-    opacity: 1;
-    transform: translate(0);
+      opacity: 1;
+      transform: translate(0);
   }
 }
