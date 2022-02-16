@@ -1,185 +1,12 @@
-// .navigation {
-//     &__checkbox {
-//          // HIDING THE CHECKBOX SINCE WE ARE USING A BUTTON INSTEAD
-//         display: none;
-//     }
-
-//     &__button {
-//         background-color: $color-white;
-//         // MAKING THE BUTTON 1rem BIGGER THAN CHECKBOX TO COVER IT
-//         height: 7rem;
-//         width: 7rem;
-//         position: fixed;
-//         top: 6rem;
-//         right: 6rem;
-//         border-radius: 50%;
-//         z-index: 2000;
-//         box-shadow: 0 1rem 3rem rgba($color-black, .1);
-//         text-align: center;
-//         cursor: pointer;
-
-//         @include respond(tab-port) {
-//             top: 4rem;
-//             right: 4rem;
-//         }
-
-//         @include respond(phone) {
-//             top: 3rem;
-//             right: 3rem;
-//         }
-//     }
-
-//     &__background {
-//         height: 6rem;
-//         width: 6rem;
-//         border-radius: 50%;
-//         position: fixed;
-//         top: 6.5rem;
-//         right: 6.5rem;
-//         background-image: radial-gradient($color-primary-light, $color-primary-dark);
-//         // POPPING THE NAV CIRCLE IN FRONT OF ALL OTHER ELEMENTS, YOU CAN DO THIS AS LONG AS YOU DEFINE THE POSITION, IN THIS CASE FIXED
-//         z-index: 1000;
-//         // CREATING A CUSTOM TRANSITION FUNCTION W/ CUBIC-BEZIER - FIND VARIOUS TRANSITIONS HERE https://easings.net/
-//         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-
-//         @include respond(tab-port) {
-//             top: 4.5rem;
-//             right: 4.5rem;
-//         }
-
-//         @include respond(phone) {
-//             top: 3.5rem;
-//             right: 3.5rem;
-//         }
-//     }
-
-//     &__nav {
-//         height: 100vh;
-//         position: fixed;
-//         top: 0;
-//         left: 0;
-//         // SETTING THE NAV TO BE ON TOP OF THE BACKGROUND AND BEHIND THE BUTTON
-//         z-index: 1500;
-//         // SETTING THE OPACITY TO 0 BEFORE THE NAV BUTTON IS CLICKED TO HIDE TEXT THAT WE WANT TO INLY SHOW WHEN BUTTON IS CLICKED
-//         opacity: 0;
-//         // WIDTH TO 0 SO THE TEXT WILL NO LONGER BE VISIBLE WHEN HOVERED OVER THE HIDDEN TEXT
-//         width: 0;
-//         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-//     }
-
-//     &__list {
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%,-50%);
-//         list-style: none;
-//         text-align: center;
-//         width: 100%;
-//     }
-
-//     &__item {
-//         margin: 1rem;
-//     }
-
-//     &__link {
-//         &:link,
-//         &:visited {
-//             display: inline-block;
-//             font-size: 3rem;
-//             font-weight: 300;
-//             padding: 1rem 2rem;
-//             color: $color-white;
-//             text-decoration: none;
-//             text-transform: uppercase;
-//              // GOOD IDEA WHEN CREATING A GRADIENT IS TO USE COLORS THAT SHARPLY CONTRAST TO MORE EASILY CREATE YOUR DESIGN THEN CHANGE THE COLORS TO WHAT YOU WANT
-//             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
-//              // SETTING THE BACKGROUND TO 220% SO THAT THE STATE OF THE BUTTON WILL BE ALL SOLID BEFORE THE HOVER ANIMATION
-//             background-size: 220%;
-//             transition: all .4s;
-
-//             span {
-//                 margin-right: 1.5rem;
-//                 display: inline-block;
-//             }
-//         }
-        
-//         &:hover,
-//         &:active {
-//             background-position: 100%;
-//             color: $color-primary;
-//             transform: translateX(1rem);
-//         }
-//     }
-
-//     //USING THE SIBLING ~ SELECTOR THEN SPECIFYING WHICH SIBLING WE WANT TO EDIT "BACKGROUND"
-//     //FUNCTIONALITY
-//     &__checkbox:checked ~ &__background {
-//         transform: scale(80);
-//     }
-
-//     &__checkbox:checked ~ &__nav {
-//         // RETURNING THE HIDDEN ELEMENTS FOR BEFORE THE BUTTON IS CLICKED BACK TO ITS ORIGINAL STATE OF VISIBILITY AFTER THE CHECKBOX/BUTTON IS CLICKED
-//         opacity: 1;
-//         width: 100%;
-//     }
-
-//     //ICON
-//     &__icon {
-//         position: relative;
-//         // MOVING DOWN THE BURGER LINES TO BE CENTERED TO THE WHITE BUTTON/CHECKBOX
-//         margin-top: 3.5rem;
-
-//         &,
-//         &::before,
-//         &::after {
-//             width: 3rem;
-//             height: 2px;
-//             background-color: $color-grey-dark-3;
-//             display: inline-block;
-//         }
-
-//         &::before,
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             left: 0;
-//             transition: all .2s;
-//         }
-//         // CREATING A TIGHTER LOOK FOR THE CHECKBOX/BUTTON BURGER LINES THAT WERE MADE AS A SPAN
-//         &::before { top: -.8rem; }
-//         &::after { top: .8rem; }
-//     }
-//         // ADDS SMALL MOVEMENT TO BUTTON WHEN HOVERED THE BURGER LINES WILL MOVE
-//     &__button:hover &__icon::before {
-//         top: -1rem;
-//     }
-
-//     &__button:hover &__icon::after {
-//         top: 1rem;
-//     }
-//         // MAKING THE CHECKBOX DISAPPEAR WHEN ITS CHECKED, USING THE ADJACENT SIBLING SELECTOR +
-//     &__checkbox:checked + &__button &__icon {
-//         background-color: transparent;
-//     }
-//         // CREATING THE NICE X ANIMATION ON THE BURGER LINES WHEN CLICKED PT1
-//     &__checkbox:checked + &__button &__icon::before {
-//         top: 0;
-//         transform: rotate(135deg);
-//     }
-//         // CREATING THE NICE X ANIMATION ON THE BURGER LINES WHEN CLICKED PT2
-//     &__checkbox:checked + &__button &__icon::after {
-//         top: 0;
-//         transform: rotate(-135deg);
-//     }
-// }
-
 .navigation {
     &__checkbox {
+        // HIDING THE CHECKBOX SINCE WE ARE USING A BUTTON INSTEAD
         display: none;
     }
 
     &__button {
         background-color: $color-white;
+        // MAKING THE BUTTON 1rem BIGGER THAN CHECKBOX TO COVER IT
         height: 7rem;
         width: 7rem;
         position: fixed;
@@ -210,7 +37,9 @@
         top: 6.5rem;
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        // POPPING THE NAV CIRCLE IN FRONT OF ALL OTHER ELEMENTS, YOU CAN DO THIS AS LONG AS YOU DEFINE THE POSITION, IN THIS CASE FIXED
         z-index: 1000;
+        // CREATING A CUSTOM TRANSITION FUNCTION W/ CUBIC-BEZIER - FIND VARIOUS TRANSITIONS HERE https://easings.net/
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
         @include respond(tab-port) {
@@ -229,9 +58,11 @@
         position: fixed;
         top: 0;
         left: 0;
+        // SETTING THE NAV TO BE ON TOP OF THE BACKGROUND AND BEHIND THE BUTTON
         z-index: 1500;
-
+        // SETTING THE OPACITY TO 0 BEFORE THE NAV BUTTON IS CLICKED TO HIDE TEXT THAT WE WANT TO INLY SHOW WHEN BUTTON IS CLICKED
         opacity: 0;
+        // WIDTH TO 0 SO THE TEXT WILL NO LONGER BE VISIBLE WHEN HOVERED OVER THE HIDDEN TEXT
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
@@ -260,7 +91,9 @@
             color: $color-white;
             text-decoration: none;
             text-transform: uppercase;
+            // GOOD IDEA WHEN CREATING A GRADIENT IS TO USE COLORS THAT SHARPLY CONTRAST TO MORE EASILY CREATE YOUR DESIGN THEN CHANGE THE COLORS TO WHAT YOU WANT
             background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            // SETTING THE BACKGROUND TO 220% SO THAT THE STATE OF THE BUTTON WILL BE ALL SOLID BEFORE THE HOVER ANIMATION
             background-size: 220%;
             transition: all .4s;
 
@@ -278,8 +111,7 @@
         }
     }
 
-
-    //FUNCTIONALITY
+    //USING THE SIBLING ~ SELECTOR THEN SPECIFYING WHICH SIBLING WE WANT TO EDIT "BACKGROUND"
     &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
@@ -293,6 +125,7 @@
     //ICON
     &__icon {
         position: relative;
+         // MOVING DOWN THE BURGER LINES TO BE CENTERED TO THE WHITE BUTTON/CHECKBOX
         margin-top: 3.5rem;
 
         &,
@@ -311,11 +144,11 @@
             left: 0;
             transition: all .2s;
         }
-
+        // CREATING A TIGHTER LOOK FOR THE CHECKBOX/BUTTON BURGER LINES THAT WERE MADE AS A SPAN
         &::before { top: -.8rem; }
         &::after { top: .8rem; }
     }
-
+        // ADDS SMALL MOVEMENT TO BUTTON WHEN HOVERED THE BURGER LINES WILL MOVE
     &__button:hover &__icon::before {
         top: -1rem;
     }
@@ -323,16 +156,16 @@
     &__button:hover &__icon::after {
         top: 1rem;
     }
-
+    // MAKING THE CHECKBOX DISAPPEAR WHEN ITS CHECKED, USING THE ADJACENT SIBLING SELECTOR +
     &__checkbox:checked + &__button &__icon {
         background-color: transparent;
     }
-
+    // CREATING THE NICE X ANIMATION ON THE BURGER LINES WHEN CLICKED PT1
     &__checkbox:checked + &__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
-
+    // CREATING THE NICE X ANIMATION ON THE BURGER LINES WHEN CLICKED PT2
     &__checkbox:checked + &__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);

@@ -1,8 +1,8 @@
-# TO COMPILE SASS USE COMMAND
- In your Terminal use "nmp run compile:sass"
-
 # TO RUN APP
  Use the "Go Live" tab or in HTML right click and "Open with live server"
+
+ # To compile Sass changes automatically use command below in your terminal
+ In your Terminal use "nmp run compile:sass", keep this terminal page open to watch for changes
 
 This Project was built with no JS as it was mostly used to familiarize myself with advanced CSS/SCSS features.
 
